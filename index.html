@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Technical Documentation</h1>
+    </header>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#Datatype">Datatype</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#operators">operators</a></li>
+                <li><a href="#Controlstructers">Control Structure</a></li>
+                <li><a href="#Functions">Functions</a></li>
+                <li><a href="#Objects">Objects</a></li>
+                <li><a href="#Array">Array</a></li>
+                <li><a href="#Classes">Classes</a></li>
+                <li><a href="#Modules">Modules</a></li>
+                <li><a href="#Errorhandling">Errorhandling</a></li>
+
+            </ul>
+        </nav>
+        <main id="documentation">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>JavaScript is a high-level programming language commonly used for creating interactive web pages and web applications. It is a versatile language known for its flexibility and compatibility with various platforms. This documentation provides an overview of JavaScript, including its syntax, data types, control structures, functions, and more..</p>
+            </section>
+            <section id="syntax">
+                <h2>Syntax</h2>
+                <p>JavaScript syntax is similar to other programming languages such as Java and C. It consists of statements that are executed sequentially or conditionally. Here's a basic syntax example:
+                    
+                    // This is a single-line comment
+                    
+                    /*
+                    This is a multi-line comment
+                    */
+                    
+                    // Variables and data types
+                    let greeting = 'Hello, world!';
+                    console.log(greeting);
+                    
+                    // Conditional statement
+                    if (greeting === 'Hello, world!') {
+                        console.log('The greeting is correct.');
+                    } else {
+                        console.log('The greeting is incorrect.');
+                    } </p>
+            </section>
+            <section id="Datatypes">
+                <h2>Data types</h2>
+                <p>JavaScript supports various data types, including:
+
+                    Primitive Types: Number, String, Boolean, Undefined, Null, Symbol
+                    Composite Types: Object
+                    Special Data Types: BigInt
+                
+                let number = 42;
+                let string = 'Hello';
+                let boolean = true;
+                let undefinedValue = undefined;
+                let nullValue = null;
+                let symbol = Symbol('foo');
+                let bigInt = 1234567890123456789012345678901234567890n;
+                
+                console.log(typeof number); // Output: number
+                </p>
+            </section>
+            <section id="variables">
+                <h2>Variables</h2>
+                <p>In JavaScript, variables are declared using the var, let, or const keyword. Variables declared with var have function-level scope, while those declared with let and const have block-level scope.
+                    
+                    var x = 10; // Function-level scope
+                    let y = 20; // Block-level scope
+                    const PI = 3.14; // Constant variable
+                    </p>
+            </section>
+            <section id="Operators">
+                <h2>Opeators</h2>
+                <p>JavaScript supports various operators such as arithmetic, assignment, comparison, logical, bitwise, and more.
+                    
+                    let a = 10;
+                    let b = 5;
+                    let result = a + b; // Addition
+                    result = a - b; // Subtraction
+                    result = a * b; // Multiplication
+                    result = a / b; // Division
+                    result = a % b; // Modulus
+                    result = a ** b; // Exponentiation
+                    </p>
+            </section>
+            <section id="Controlstructure">
+                <h2>Control Structure</h2>
+                <p>JavaScript provides control structures like if-else, switch, for, while, and do-while loops for conditional and iterative execution.
+                    
+                    let num = 10;
+                    
+                    if (num > 0) {
+                        console.log('Number is positive');
+                    } else if (num < 0) {
+                        console.log('Number is negative');
+                    } else {
+                        console.log('Number is zero');
+                    }</p>
+            </section>
+            <section id="Functions">
+                <h2>Functions</h2>
+                <p>Functions in JavaScript are defined using the function keyword. They can be declared as function declarations or function expressions.
+  
+                    // Function declaration
+                    function greet(name) {
+                        return 'Hello, ' + name + '!';
+                    }
+                    
+                    // Function expression
+                    let greet = function(name) {
+                        return 'Hello, ' + name + '!';
+                    };</p>
+            </section>
+            <section id="objects">
+                <h2>Objects</h2>
+                <p>Objects in JavaScript are collections of key-value pairs. They are used to represent complex data structures and are fundamental to JavaScript programming.
+                    
+                    let person = {
+                        name: 'John',
+                        age: 30,
+                        isMarried: false,
+                        greet: function() {
+                            return 'Hello, my name is ' + this.name + '.';
+                        }
+                    };</p>
+            </section>
+            <section id="arrays">
+                <h2>Arrays</h2>
+                <p>Arrays in JavaScript are used to store multiple values in a single variable. They can contain elements of different data types and have various built-in methods for manipulation.
+                    
+                    let fruits = ['apple', 'banana', 'orange'];
+                    fruits.push('mango'); // Add element to the end
+                    fruits.pop(); // Remove element from the end
+                    </p>
+            </section>
+            <section id="classes">
+                <h2>classes</h2>
+                <p>JavaScript introduced class syntax in ECMAScript 6 for object-oriented programming. Classes are blueprints for creating objects with properties and methods.
+
+                    class Rectangle {
+                        constructor(width, height) {
+                            this.width = width;
+                            this.height = height;
+                        }
+                    
+                        area() {
+                            return this.width * this.height;
+                        }
+                    }
+                    
+                    let rectangle = new Rectangle(5, 10);
+                    console.log(rectangle.area()); // Output: 50
+                    </p>
+            </section>
+            <section id="modules">
+                <h2>Modules</h2>
+                <p>JavaScript modules allow you to organize code into reusable units. They encapsulate related functionality and provide a way to export and import code between files.
+
+                    // Math.js
+                    export function add(a, b) {
+                        return a + b;
+                    }
+                    
+                    // main.js
+                    import { add } from './Math.js';  
+                    console.log(add(5, 10)); // Output: 15
+                    </p>
+            </section>
+            <section id="errorhandling">
+                <h2>Error handling</h2>
+                <p>JavaScript provides try, catch, and finally blocks for error handling. Errors can be thrown using the throw statement.
+        
+                    try {
+                        // Code that may throw an error
+                        throw new Error('An error occurred');
+                    } catch (error) {
+                        // Handle the error
+                        console.log(error.message);
+                    } finally {
+                        // Code that runs regardless of whether an error occurred
+                        console.log('Cleanup code');
+                    }
+                    
+                    </p>
+            </section>
+            
+        </main>
+    </div>
+</body>
+
+</html>
